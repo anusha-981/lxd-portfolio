@@ -1,0 +1,304 @@
+/* === Case Study Hero === */
+.cs-hero {
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-hero::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 300px;
+  height: 300px;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='80' stroke='%23E07A5F' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='100' r='60' stroke='%23E07A5F' fill='none' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='40' stroke='%23E07A5F' fill='none' stroke-width='1'/%3E%3Cpath d='M100 20 L100 180 M20 100 L180 100' stroke='%23E07A5F' fill='none' stroke-width='0.8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.cs-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cs-back {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  transition: opacity 0.2s;
+}
+
+.cs-back:hover {
+  opacity: 0.7;
+}
+
+.cs-tag {
+  display: inline-block;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.cs-title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.cs-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* === Meta Bar === */
+.cs-meta {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.cs-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.cs-meta-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.cs-meta-item p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+/* === Sections === */
+.cs-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-section-alt {
+  background: var(--color-bg-warm);
+}
+
+.cs-section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.cs-content {
+  max-width: 800px;
+}
+
+.cs-content p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* === Callout Box === */
+.cs-callout {
+  background: var(--color-card-bg);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 12px 12px 0;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.cs-callout h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.cs-callout ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cs-callout li {
+  padding: 0.4rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cs-callout li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* === Process Steps === */
+.cs-process-step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  align-items: flex-start;
+}
+
+.cs-step-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-accent-soft);
+  line-height: 1;
+  min-width: 60px;
+}
+
+.cs-step-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.cs-step-content p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* === Design Decision Cards === */
+.cs-design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cs-design-card {
+  background: var(--color-card-bg);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+
+.cs-design-card:hover {
+  transform: translateY(-3px);
+}
+
+.cs-design-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.cs-design-card p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* === Outcomes === */
+.cs-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cs-outcome-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-card-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.cs-outcome-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.cs-outcome-card p {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* === Footer === */
+.cs-footer .section-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .cs-title {
+    font-size: 2rem;
+  }
+
+  .cs-process-step {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cs-step-number {
+    font-size: 1.8rem;
+  }
+
+  .cs-design-grid,
+  .cs-outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Article Links in Callouts === */
+.cs-article-link {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.cs-article-link:hover {
+  color: var(--color-accent);
+}
+
+.cs-article-link strong {
+  color: var(--color-text);
+}
+
+.cs-article-link:hover strong {
+  color: var(--color-accent);
+}

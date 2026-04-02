@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: AI Agent Annotation Training | Anusha Batra</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="case-study.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AB</a>
+      <ul class="nav-links">
+        <li><a href="index.html#work">All Work</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#outcome">Outcome</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="cs-hero">
+    <div class="cs-hero-content">
+      <a href="index.html#work" class="cs-back">&larr; Back to all work</a>
+      <div class="cs-tag">AI &amp; Learning Design</div>
+      <h1 class="cs-title">Designing Training for AI Agent Annotation</h1>
+      <p class="cs-subtitle">How I built annotation guidelines and a learning experience to help 50+ evaluators accurately assess AI agent performance across 1M+ data points.</p>
+    </div>
+  </header>
+
+  <section class="cs-meta">
+    <div class="section-container">
+      <div class="cs-meta-grid">
+        <div class="cs-meta-item">
+          <h3 class="cs-meta-label">Role</h3>
+          <p>Content Author &amp; Learning Designer</p>
+        </div>
+        <div class="cs-meta-item">
+          <h3 class="cs-meta-label">Timeline</h3>
+          <p>2024 &ndash; Present</p>
+        </div>
+        <div class="cs-meta-item">
+          <h3 class="cs-meta-label">Audience</h3>
+          <p>Data Annotators &amp; Quality Auditors</p>
+        </div>
+        <div class="cs-meta-item">
+          <h3 class="cs-meta-label">Frameworks</h3>
+          <p>Bloom's Taxonomy, Gagn&eacute;'s Nine Events, Kirkpatrick Model, Adult Learning Theory</p>
+        </div>
+        <div class="cs-meta-item">
+          <h3 class="cs-meta-label">Tools</h3>
+          <p>Articulate Storyline, Articulate Rise, Adobe Suite, Confluence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" id="overview">
+    <div class="section-container">
+      <h2 class="cs-section-title">The Challenge</h2>
+      <div class="cs-content">
+        <p>
+          An AI research team was developing an autonomous web agent capable of navigating websites, 
+          extracting information, and completing tasks on behalf of users. To improve the model, the team 
+          needed human evaluators to accurately annotate thousands of real-world agent workflows — assessing 
+          whether the AI successfully completed each task, identifying where it failed, and categorizing 
+          the type and severity of errors.
+        </p>
+        <p>
+          The problem: the evaluation process was complex. Annotators needed to distinguish between 
+          multiple workflow statuses (success, failure, unknown, out of scope, demo, guardrail), 
+          identify specific failure steps, classify errors across a severity hierarchy, and assign 
+          granular failure buckets — all while handling sensitive customer data under strict security 
+          protocols.
+        </p>
+
+        <div class="cs-callout">
+          <h3>Key Challenges</h3>
+          <ul>
+            <li>Complex multi-step evaluation process with 7+ classification dimensions</li>
+            <li>12+ failure bucket categories requiring nuanced judgment</li>
+            <li>Strict security requirements for handling customer data</li>
+            <li>Frequent guideline updates as the AI model evolved</li>
+            <li>Mixed audience: new hires needing onboarding + experienced annotators needing retraining on updates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section cs-section-alt" id="process">
+    <div class="section-container">
+      <h2 class="cs-section-title">My Approach</h2>
+      <div class="cs-content">
+
+        <div class="cs-process-step">
+          <div class="cs-step-number">01</div>
+          <div class="cs-step-content">
+            <h3>Needs Analysis &amp; Content Audit</h3>
+            <p>
+              I started by mapping the full annotation workflow end-to-end, identifying every decision 
+              point an annotator faces. Using Bloom's Taxonomy, I analyzed the cognitive demands at each 
+              step — from basic recall (identifying workflow statuses) to evaluation-level judgment 
+              (classifying failure severity). I catalogued the types of errors being made and traced 
+              them back to gaps in the existing documentation.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-process-step">
+          <div class="cs-step-number">02</div>
+          <div class="cs-step-content">
+            <h3>Structured Guideline Design</h3>
+            <p>
+              I authored comprehensive annotation conventions organized around the annotator's actual 
+              workflow — not the system's architecture. Drawing on Gagn&eacute;'s Nine Events of 
+              Instruction, each section opens with context (gaining attention), states the objective, 
+              provides guided examples, and closes with practice scenarios. This structure supports 
+              adult learners who need to understand the "why" before the "how."
+            </p>
+            <p>
+              I built in a severity-based error taxonomy with explicit rules: success runs can only 
+              pair with low-impact or no-failure categories, while failure runs require high-impact 
+              classifications. Decision tables replaced dense paragraphs, making correct pairings 
+              scannable at a glance.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-process-step">
+          <div class="cs-step-number">03</div>
+          <div class="cs-step-content">
+            <h3>Edge Case Library</h3>
+            <p>
+              Real-world AI behavior is messy. I developed a library of edge cases covering scenarios 
+              like: workflows with minor errors but successful outcomes, ambiguous prompts, cookie popup 
+              handling, human-in-the-loop activations, and model hallucinations. Each edge case included 
+              the scenario, the correct evaluation, and the reasoning — turning abstract rules into 
+              concrete judgment calls.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-process-step">
+          <div class="cs-step-number">04</div>
+          <div class="cs-step-content">
+            <h3>Audit Framework &amp; Quality Loop</h3>
+            <p>
+              I designed a structured audit strategy with a 7-question pass/fail rubric, standardized 
+              error codes with severity levels (Critical P0, Major P1, Minor P2), and clear scoring 
+              thresholds. Applying the Kirkpatrick Model, I evaluated training effectiveness across 
+              multiple levels — from learner reaction and knowledge retention to on-the-job behavior 
+              changes and business impact on annotation quality metrics.
+            </p>
+          </div>
+        </div>
+
+        <div class="cs-process-step">
+          <div class="cs-step-number">05</div>
+          <div class="cs-step-content">
+            <h3>Living Documentation &amp; Change Management</h3>
+            <p>
+              AI models evolve fast, and guidelines need to keep pace. I implemented a release notes 
+              system with dated entries, clear change descriptions, and "UPDATED" / "ADDED" tags 
+              inline so annotators could quickly identify what changed. This reduced confusion during 
+              transitions and gave experienced annotators a fast path to the latest updates.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" id="design">
+    <div class="section-container">
+      <h2 class="cs-section-title">Design Decisions</h2>
+      <div class="cs-content">
+        <div class="cs-design-grid">
+          <div class="cs-design-card">
+            <h3>Workflow-Aligned Structure</h3>
+            <p>
+              Rather than organizing by concept, I structured the guidelines to mirror the annotator's 
+              actual task flow — step 1 through step 9. This reduced cognitive load and made the doc 
+              usable as a real-time reference during annotation.
+            </p>
+          </div>
+          <div class="cs-design-card">
+            <h3>Decision Tables Over Paragraphs</h3>
+            <p>
+              For complex classification rules (like status + failure category combinations), I used 
+              scenario tables with columns for status, category, and reasoning. This made correct 
+              pairings scannable at a glance instead of buried in prose.
+            </p>
+          </div>
+          <div class="cs-design-card">
+            <h3>Model Capability Reference</h3>
+            <p>
+              I created a "what the model can and can't do" section — organized into CAN, CANNOT, 
+              SHOULDN'T, FORBIDDEN, and NOT YET GOOD AT. This gave annotators the context they needed 
+              to make fair evaluations without over- or under-penalizing the AI.
+            </p>
+          </div>
+          <div class="cs-design-card">
+            <h3>Inline Change Markers</h3>
+            <p>
+              Instead of expecting annotators to read full release notes, I added "UPDATED" and "ADDED" 
+              tags directly in the relevant sections. Experienced annotators could scan for changes 
+              without re-reading the entire document.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section cs-section-alt" id="outcome">
+    <div class="section-container">
+      <h2 class="cs-section-title">Outcomes &amp; Impact</h2>
+      <div class="cs-content">
+        <div class="cs-outcomes-grid">
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-number">50+</div>
+            <p>ML engineers and data scientists adopted the standardized guidelines</p>
+          </div>
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-number">20%</div>
+            <p>Improvement in model accuracy through better annotation quality</p>
+          </div>
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-number">13.5%</div>
+            <p>Reduction in AI inconsistencies and biases</p>
+          </div>
+          <div class="cs-outcome-card">
+            <div class="cs-outcome-number">30%</div>
+            <p>Increase in operational efficiency through standardized processes</p>
+          </div>
+        </div>
+
+        <div class="cs-callout">
+          <h3>Key Takeaways</h3>
+          <ul>
+            <li>Complex evaluation tasks need structure that mirrors the evaluator's workflow, not the system's architecture</li>
+            <li>Edge cases are where most annotation errors happen — investing in a concrete edge case library pays off quickly</li>
+            <li>Living documentation with inline change markers is essential when guidelines evolve frequently</li>
+            <li>A structured audit framework creates a feedback loop that continuously improves both the guidelines and annotator performance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="section-container">
+      <h2 class="cs-section-title">Reflection</h2>
+      <div class="cs-content">
+        <p>
+          This project reinforced something I believe deeply about learning design: the best training 
+          materials don't just tell people what to do — they help people make better judgments. 
+          Annotation work is fundamentally about decision-making under ambiguity, and the learning 
+          experience needed to reflect that. Adult learning theory was central here — these evaluators 
+          are experienced professionals who need autonomy, relevance, and immediate applicability.
+        </p>
+        <p>
+          If I were to iterate further, I'd build interactive scenario-based assessments in 
+          Articulate Storyline where annotators practice classifying real (anonymized) workflows 
+          before going live — with branching scenarios that mirror the decision complexity they 
+          face on the job. The edge case library is a strong foundation for that kind of 
+          practice-based learning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cs-footer">
+    <div class="section-container">
+      <a href="index.html#work" class="btn btn-secondary">&larr; Back to all work</a>
+      <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </footer>
+</body>
+</html>
